@@ -48,6 +48,13 @@ class RingBuffer {
   
 };
 
+size_t next_power_of_two(size_t n){
+  size_t k = 1;
+  while (k < n)
+    k*=2;
+  return k; 
+}
+
 void producer(RingBuffer& rb,  size_t iterations){
   for (size_t i = 1; i < iterations ; ++i){
     while (!rb.push(static_cast<uint32_t>(i))){

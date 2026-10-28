@@ -6,6 +6,7 @@
 !*.cpp
 !*.rs
 !*.toml
+!Cargo.lock
 
 !.gitignore
 !*.md
